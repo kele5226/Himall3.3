@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="format-detection" content="telephone=no, address=no">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+    <title>商品详情</title>
+    <script>
+        (function () {
+            var baseFontSize = 100;
+            var baseWidth = 320;
+            var clientWidth = document.documentElement.clientWidth || window.innerWidth;
+            var innerWidth = Math.max(Math.min(clientWidth, 480), 320);
+
+            var rem = 100;
+
+            if (innerWidth > 362 && innerWidth <= 375) {
+                rem = Math.floor(innerWidth / baseWidth * baseFontSize);
+                //rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.9);
+            }
+
+            if (innerWidth > 375) {
+                rem = Math.floor(innerWidth / baseWidth * baseFontSize);
+                //rem = Math.floor(innerWidth / baseWidth * baseFontSize * 0.84);
+            }
+
+            window.__baseREM = rem;
+            document.querySelector('html').style.fontSize = rem + 'px';
+        }());
+    </script>
+    <link rel="stylesheet" href="/Content/bootstrap.min.css?v=20183030">
+    <link rel="stylesheet" href="/Areas/Mobile/Templates/Default/Content/custom.css?v=20183030">
+    
+    <script src="/Scripts/jquery-1.7.1.min.js"></script>
+    <script src="/Scripts/CommonJS.js?v=20183030"></script>
+    <script src="/Areas/Mobile/Templates/Default/Scripts/custom.js?v=20183030"></script>
+    <script src="/Areas/Mobile/Templates/Default/Scripts/buylib.js?v=20183030"></script>
+    <script src="/Scripts/imitateRequire.js?v=20183030"></script>
+    <script>
+		//imitateRequireJS.addJsFile([{
+		//	group: 'common',
+		//	fileNames: [
+		//		{ nickName: 'jquery.artDialog', fileName: 'jquery.artDialog.js' },
+		//		{ nickName: 'artDialog', fileName: 'artDialog.iframeTools.js', depends: ['jquery.artDialog'] },
+		//	]
+		//}]);
+
+		function Refresh() {
+		    var redirecturl = '/m-wap/Product/RedirectToUrl?url=%7B0%7D';
+		    location.href = redirecturl.replace(encodeURIComponent("{0}"), encodeURIComponent(location.href));
+		}
+    </script>
+</head>
+<body>
+    <!--_Base start-->
+    <script>
+		var areaName = 'm-Wap';
+		var MAppType = '';
+    </script>
+    <div id="shop-head"></div>
+    
+<input type="hidden" id="gid" value="749" />
+<input type="hidden" id="categoryId" value="159" />
+<input type="hidden" id="has" value="1" />
+<div id="J_shop_att"></div>
+<div class="container container-z">
+	<div class="cover distribution">
+        <img src="/Areas/Mobile/Templates/Default/Images/proShare.png" />
+    </div>
+    <div class="detail-hd">
+        <div id="slides">
+                                <img data-src="/Storage/Shop/1/Products/749/1_500.png" />
+                    <img data-src="/Storage/Shop/1/Products/749/2_500.png" />
+                    <img data-src="/Storage/Shop/1/Products/749/3_500.png" />
+                    <img data-src="/Storage/Shop/1/Products/749/4_500.png" />
+                    <img data-src="/Storage/Shop/1/Products/749/5_500.png" />
+        </div>
+    </div>
+    <div class="detail-bd">
+        <div class="goods-info">
+        	<div class="icon-share hide" id="dis-share">
+        		<i class="iconfonts icon-icon_-share"></i>
+        		<div class="most hide" id="dis-maxbrokeragebox">最高赚 <span class="price" id="dis-maxbrokerage">￥0.00</span></div>
+        	</div>
+            <div id="preheat"></div>
+            <div class="item">
+                <div class="goods-price" id="jd-price">
+                        <span id="jd-saleprice"></span>
+                            <s id="marketpricebox">￥50000.00</s>
+					
+                </div>
+                <h4>积家（Jaeger）Master Control大师系列机械男表Q1552520 银色</h4>
+                <h5>【特价专区】店铺全部商品执行低价销售！全国联保！高价手表可咨询客服改价优惠！</h5>
+                <div class="salefreight" id="salefreight">
+                        <span><a id="freight">运费 20.00元</a></span>
+                        <span>48h内发货</span>
+                </div>
+            </div>
+          
+            <div class="item promotion-wrap" id="divCoupon">
+                <div class="promotion">
+                    <ul class="promotion-list" id="showPromotion">
+                        <li class="promotion-coupon" style="display:none;" onclick="showPortfolio()">
+                            <a href="javascript:;" class="item-navigate-right">
+                                <span id="activespan"><i class="coupon-tip">促销优惠</i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div id="productColloCation"></div>
+                <div class="goods-address" id="showDeportAddress">
+                </div>
+            </div>
+            
+
+        <ul class="ensary j_ensary">
+                <li class="flex-center"><i>消费者保障</i></li>                     </ul>
+      
+<input data-val="true" data-val-number="字段 Int64 必须是一个数字。" id="shopId" name="shopId" type="hidden" value="1" />
+<input data-val="true" data-val-number="字段 Int64 必须是一个数字。" id="productId" name="productId" type="hidden" value="749" />
+        </div>
+        <div class="item detail-comment j_storesInfo product-store-title" style="display:none">
+            <div class="goods-comment">
+                <h1><b class="j_storeName"></b><span class="j_distanceUnit"></span><i class="ic-arrow"></i></h1>
+                <p class="j_storeAddress"></p>
+                <a class="j_storelist btn btn-default"></a>
+            </div>
+        </div>
+        
+        <div class="item detail-comment">
+            <div class="detail-comment-hd">
+                商品评价
+                <span class="detail-comment-num">0</span>
+            </div>
+            <div id="productCommentShow">
+            </div>
+            <div class="detail-comment-ft">
+                <a class="btn btn-default" href="../ProductComment?pId=749&commentType=0">查看全部评价</a>
+            </div>
+        </div>
+
+        
+<div class="item shop-wrap">
+    <div class="shop-hd">
+        <div class="shop-logo"><img src="/Storage/Shop/1/VShop/201702141734365302700.png"></div>
+        <h4 class="j_shopName">官方自营店</h4>
+        <div class="shop-hd-info">
+            <span>宝贝数<strong>34</strong></span>
+            <span>关注人数<strong id="favoriteShopCount">0</strong></span>
+        </div>
+    </div>
+    <ul class="shop-bd clearfix">
+        <li><strong>5.00</strong><div>商品</div></li>
+        <li><strong>5.00</strong><div>发货</div></li>
+        <li><strong>5.00</strong><div>服务</div></li>
+    </ul>
+    <div class="shop-ft clearfix">
+        <span><a class="btn btn-default" id="bt_govshop" href="/m-Wap/vshop/detail/10" vshopid="10">进入店铺</a></span>
+        <span><a class="btn btn-default " id="addShopFavorite" shopid="1">关注</a></span>
+    </div>
+</div>
+<input type="hidden" id="shopId" name="shopId" value="1" />
+<script src="/Areas/Mobile/Templates/Default/Scripts/ShowShopScore.js?v=20183030"></script>
+
+
+        <div id="productColloCation">
+        </div>
+        
+        
+    <div class="item details-link">
+        <a href="javascript:void(0)" id="showmoreprodesc"><span>查看更多详情</span></a>
+    </div>
+    <div class="goods-img clearfix" id="prodesccon"></div>
+    <div id="autoLoad" class="loading"></div>
+<input id="gid_desc" name="gid_desc" type="hidden" value="749" />
+<script src="/Areas/Mobile/Templates/Default/Scripts/ProductShowProductDescription.js?v=20183030"></script>
+<script src="/Scripts/jquery.scrollLoading.min.js"></script>
+<script src="/Areas/Mobile/Templates/Default/Scripts/loading.js"></script>
+
+        <div class="right" style="display:none;background:#fff">
+            <div class="relation-title text-center"><span>猜你喜欢</span></div>
+            <div id="relationProducts" class="clearfix">
+                <template>
+                    <a class="relation-pro clearfix" href="/m-wap/Product/detail/{{id}}">
+                        <div class="relation-pro-img">
+                            <img src="{{imagePath}}" />
+                        </div>
+                        <p class="relation-pro-price"><i>￥</i>{{minSalePrice}}</p>
+                        <p class="relation-pro-name">{{productName}}</p>
+                    </a>
+                </template>
+            </div>
+        </div>
+    </div>
+</div>
+<section id="s-actionBar-container">
+    <div id="s-actionbar" class="action-bar">
+        <div class="cell tocart icon-cart-c">
+            购物车
+            <a href="/m-Wap/Cart/Cart?returnUrl=%2fm-wap%2fProduct%2fDetails%2f749%3fnojumpfg%3d1"></a>
+            <span class="plus-one">1</span>
+        </div>
+    </div>
+</section>
+<input type="hidden" id="proDesc" value="&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/fb0e42094f5a4b14a1d58be6d3240659.jpg&quot; style=&quot;&quot; title=&quot;130770327070953959079750_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/5a44fe62fa82472ebb28ae4090715308.jpg&quot; style=&quot;&quot; title=&quot;203029478111080927671545_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/075b106f3e804eedbb23afd3857021dd.jpg&quot; style=&quot;&quot; title=&quot;200493045321581547287850_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/ca67ad162b3c480582b078597ae9af62.jpg&quot; style=&quot;&quot; title=&quot;172422154169193566069950_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/487724d0148b4c07afdad233edf7c985.jpg&quot; style=&quot;&quot; title=&quot;336393284157900838633750_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/05a253b787dd4814b30ced2a1747ae89.jpg&quot; style=&quot;&quot; title=&quot;879915146185111203465000_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;img src=&quot;/Storage/Shop/1/Products/749/remark/4ca0d2d1cc8141e396e1bc2b0de38390.jpg&quot; style=&quot;&quot; title=&quot;396771162199382333953840_x.jpg&quot;/&gt;&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;" />
+<input type="hidden" id="shopId" value="1" />
+<input type="hidden" id="couponUrl" value="/m-wap/coupon/ShopCouponList" />
+<input type="hidden" id="skuUrl" value="/m-wap/Product/GetSKUInfo" />
+<input type="hidden" id="productType" value="0" />
+<!--_WeiXinShare start-->
+<script src="https://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script src="/Areas/Mobile/Templates/Default/Scripts/WeiXinShare.js"></script>
+<!--_WeiXinShare end-->
+<script>
+    var loading = showLoading();
+    var winxinShareArgs = {
+        success: function () {
+            loading.close();
+        },
+        error: function () {
+            loading.close();
+        },
+        share: {
+            title: '积家（Jaeger）Master Control大师系列机械男表Q1552520 银色',
+            desc: '【特价专区】店铺全部商品执行低价销售！全国联保！高价手表可咨询客服改价优惠！',
+            link: location.href,
+            imgUrl: 'http://localhost:32223//Storage/Shop/1/Products/749/1_150.png',
+            success: null,
+            cancel: null,
+            fail: null,
+            complete: null,
+            trigger: null
+        }
+    };
+</script>
+<script src="https://map.qq.com/api/js?v=2.exp&libraries=convertor"></script>
+<script src="https://3gimg.qq.com/lightmap/components/geolocation/geolocation.min.js"></script>
+<script src="/Areas/Mobile/Templates/Default/Scripts/ProductDetail.js"></script>
+<script src="/Areas/Mobile/Templates/Default/Scripts/ProductDistributionBrokerage.js"></script>
+<script src="/Scripts/jquery.cookie.js"></script>
+<script src="/Scripts/jquery.slides.min.js"></script>
+<script src="/Areas/Mobile/Templates/Default/Scripts/fly-zomm-img.min.js"></script>
+<a class="WX-backtop"></a>
+<div id="ShopCoupon"></div>
+<div id="portfolioCoupon">
+    <div class="modul-popup">
+        <div class="modul-popup-container sale-popup-container">
+            <div class="sale-popup-header"></div>
+            <div class="sale-popup-body">
+                <div class="modul-scroll">
+                    <table class="sale-table" width="100%">
+                        <tbody id="activeList"></tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="sale-popup-footer">
+                <a href="javascript:" class="modul-popup-close sale-popup-close"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<a href="javascript:;" class="btn_top"></a>
+
+
+
+<!--_Aside start-->
+<div id="_Aside_CustomServices">
+</div>
+<script src="/Areas/Mobile/Templates/Default/Scripts/_Aside.js?v=20183030"></script>
+
+    <div class="wx_aside">
+            <!-- 更多 -->
+            <a href="javascript:;" class="btn_more"></a>
+                <div class="wx_aside_item">
+                        <a href="/m-wap"><img src="/temp/201801151513598392290.png" style="width:25px;height:25px;" />首页</a>
+                        <a href="/m-wap/cart/cart"><img src="/temp/201801151516188685020.png" style="width:25px;height:25px;" />购物车</a>
+                        <a href="/m-wap/member/center"><img src="/temp/201801151517283011020.png" style="width:25px;height:25px;" />个人中心</a>
+                        <a href="/m-wap/shopbranch/storelist"><img src="/temp/201801151517094925190.png" style="width:25px;height:25px;" />周边门店</a>
+                        <a href="/m-wap/vshop"><img src="/temp/201801151514216165760.png" style="width:25px;height:25px;" />微店列表</a>
+                </div>
+    </div>
+<!--_Aside end-->
+	
+<style>#MEIQIA-PANEL-HOLDER{right: 0; width: 100%; height: 100%;}</style>
+
+
+            <script src="/Scripts/jquery.nicescroll.min.js"></script>
+
+    <script src="/Areas/Mobile/Templates/Default/Scripts/_Base.js?v=20183030"></script>
+    <link rel="stylesheet" href="/Areas/Mobile/Templates/Default/Content/artdialog.css?v=20183030">
+    <script src="/Scripts/jquery.artDialog.js?v=20183030"></script>
+    <script src="/Areas/Mobile/Templates/Default/Scripts/artDialog.iframeTools.js?v=20183030"></script>
+    <script src="/Scripts/jquery.cookie.js"></script>
+    <script src="/Scripts/jquery.scrollLoading.min.js"></script>
+
+    
+
+    <script>
+		(function () {
+			var data= null;
+			if (data) {
+				var callback;
+				if (data.goBack == true)
+					callback = function () { history.go(-1); };
+				var fun;
+				if (data.type == -1)
+					fun='errorTips';
+				else if(data.type==0)
+					fun='alert';
+				else if (data.type == 1)
+					fun='alertTips';
+				else if (data.type == 2)
+					fun='succeedTips';
+				if(fun)
+					$.dialog[fun](data.message,callback,data.time);
+			}
+		})();
+</script>
+    <!--_Base end-->
+</body>
+</html>
